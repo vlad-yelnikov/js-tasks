@@ -11,18 +11,22 @@ function lengthSection(a, b) {
     console.log(result);
 }
 
-// lengthSection(250, 90);
-
 //#6
+
+function showNumbers(n) {
+    while (n > 0) {
+        let x = n % 10;
+        console.log(x);
+        n = Math.floor(n / 10);
+    }
+}
 
 //#7
 
 function sum(a, b) {
-    let sum = a;
-    for (let i = a; i++; i < b) {
-        sum += 1;
+    let result = a;
+    for (let i = a; i < b; i++) {
+        result += i + 1;
     }
-    console.log(sum);
+    console.log(result);
 }
-
-sum(3, 7);
