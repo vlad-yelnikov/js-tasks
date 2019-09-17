@@ -37,7 +37,7 @@ function sum(a, b) {
 
 function factorial(n) {
     let result = 1;
-    for (let i = 1; i < n + 1; i++) {
+    for (let i = 1; i <= n ; i++) {
         result *= i;
     }
     console.log(result);
@@ -47,13 +47,13 @@ function factorial(n) {
 
 function arraySum() {
     let num;
-    let myArray = [];
+    let arr = [];
     do {
         num = prompt('Enter a number', '');
         if (num === '' || num === null || isNaN(num)) break;
-        myArray.push(+num);
+        arr.push(+num);
     } while (true);
-    console.log(myArray.reduce((sum, num) => sum + num));
+    console.log(arr.reduce((sum, num) => sum + num));
 }
 
 //#10
@@ -73,3 +73,5 @@ function digitN(k, n) {
     if (k >= 1) console.log(parseInt(k % 10));
     else console.log(-1);
 }
+
+digitN(2583,2);
