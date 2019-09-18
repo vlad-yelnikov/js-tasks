@@ -2,6 +2,15 @@
 
 //2
 
+function createArrayIterator(array) {
+    let counter = 0;
+    return function() {
+        console.log(array[counter]);
+        counter++;
+
+    };
+}
+
 //3
 
 function rectangle() {
@@ -38,13 +47,13 @@ function sumDigits(k) {
     console.log(((k - 1) % 9) + 1);
 }
 
-let digitSumRec = (k) => {
+let digitSumRec = k => {
     if (k < 10) {
         return k;
     } else {
-        return 1 + (digitSumRec(k - 1) % 9);
+        return (digitSumRec(k - 1) % 9) + 1;
     }
-}
+};
 
 function digitSumArr(k) {
     let arr = [];
@@ -54,6 +63,3 @@ function digitSumArr(k) {
     }
     console.log(arr.reduce((sum, num) => sum + num));
 }
-
-digitSumRec(123);
-console.log(digitSumRec);
