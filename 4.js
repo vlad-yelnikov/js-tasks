@@ -63,3 +63,22 @@ function digitSumArr(k) {
     }
     console.log(arr.reduce((sum, num) => sum + num));
 }
+
+//5
+
+function format(data, type) {
+    if (type == 'number') {
+        format = function () {
+            return Number(data);
+        }
+    } else if (type == 'string') {
+        format = function () {
+            return String(data);
+        }
+    } else if (type == 'boolean') {
+        format = function () {
+            return Boolean(data);
+        }
+    }
+ }
+ 
