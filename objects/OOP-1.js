@@ -33,15 +33,9 @@ let tv = {
         this.currentChannel--;
     },
     setChannel: function(n) {
-        this.currentChannel == n;
+        this.currentChannel = n;
     }
 };
-
-tv.setChannel(5);
-tv.nextChannel();
-tv.nextChannel();
-tv.previousChannel();
-console.log(tv.currentChannel);
 
 //5
 
@@ -62,3 +56,24 @@ let employee = {
         languages: ['Java', 'Python', 'SQL']
     }
 };
+
+//6
+
+function isEmpty(obj) {
+    for (let key in obj) {
+        return false;
+    }
+    return true;
+}
+
+//7
+
+function avgSalarie(obj) {
+    let sum = 0;
+    let length = 0;
+    for (let key in obj) {
+        sum += obj[key];
+        if (obj.hasOwnProperty(key)) length++;
+    }
+    console.log(sum /= length);
+}
