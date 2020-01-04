@@ -1,5 +1,6 @@
-window.onscroll = scrolling();
-
+window.onscroll = function() {
+    scrolling();
+};
 function scrolling() {
     let winScroll = window.scrollY;
     let height =
