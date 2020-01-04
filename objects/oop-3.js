@@ -38,27 +38,28 @@ let tom = {
 let f = bind(func, tom);
 
 //4
-
-function Player(volume) {
-    let _volume = 0;
-    function volumeValid(volume) {
-        if (volume >= 0 && volume <= 100) {
-            _volume = volume;
+class Player {
+    constructor(volume) {
+        let _volume = 0;
+        function volumeValid(volume) {
+            if (volume >= 0 && volume <= 100) {
+                _volume = volume;
+            }
         }
-    }
-    volumeValid(volume);
-    this.getVolume = function() {
-        return _volume;
-    };
-    this.setVolume = function(volume) {
         volumeValid(volume);
-    };
-    this.volume = function(volume) {
-        if (volume === undefined) {
+        this.getVolume = function () {
             return _volume;
-        }
-        volumeValid(volume);
-    };
+        };
+        this.setVolume = function (volume) {
+            volumeValid(volume);
+        };
+        this.volume = function (volume) {
+            if (volume === undefined) {
+                return _volume;
+            }
+            volumeValid(volume);
+        };
+    }
 }
 
 //5
