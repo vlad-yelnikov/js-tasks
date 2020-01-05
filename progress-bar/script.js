@@ -20,7 +20,5 @@ function scrolling() {
     } else {
         color = 'lightblue';
     }
-    let barColor = (document.getElementById(
-        'progress-bar'
-    ).style.backgroundColor = `${color}`);
+    document.getElementById('progress-bar').style.backgroundColor = `${color}`;
 }
